@@ -10,7 +10,8 @@ public class Main {
 		System.out.println(add(3,4));
 		System.out.println(x(2,3));
 		System.out.println("Zsenialis");
-		System.out.println("Igen, tényleg az. Örülök hogy végre sikerült.");
+		System.out.println("Igen, tényleg az. Örülök hogy végre sikerült."
+				+ " Biztosan kell ez a sok felesleges függvény?");
 	}
 	
 	static int add(int a, int b){
