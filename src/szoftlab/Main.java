@@ -9,6 +9,7 @@ public class Main {
 		System.out.println("Nagyon team projeccct");
 		System.out.println(add(3,4));
 		System.out.println(x(2,3));
+		System.out.println("Zsenialis");
 	}
 	
 	static int add(int a, int b){
