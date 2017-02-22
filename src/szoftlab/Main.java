@@ -16,5 +16,8 @@ public class Main {
 	static int x(int a, int b){
 		return a*b;
 	}
+	public int test(int c, int b){
+		return c-b;
+	}
 
 }
