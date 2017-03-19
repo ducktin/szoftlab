@@ -16,11 +16,11 @@ public class Rail {		//A sín osztály, a többi pályaelem is ebből származik
 		return "Rail "+name;
 	}
 	
-	public Movable amIUsed(){ //Megkérdezzük, hogy használatban van-e
+	public Movable amIUsed(){ //Megkérdezzük, hogy ki használja
 		return usedby;
 	}
 	
-	public void setUsedBy(Movable usedby){ //Beállítjuk, hogy használva van-e a sín
+	public void setUsedBy(Movable usedby){ //Beállítjuk, hogy ki használja a sínt
 		this.usedby=usedby;
 	}
 	
