@@ -17,7 +17,8 @@ public class Locomotive extends Movable{
 	@Override
 	public boolean move(Rail tohere) {
 		Rail templastplace = this.currentPlace;		
-		currentPlace = currentPlace.whosNext(lastPlace);	//Átveszi hova kell mennie és elmenti honnan jött
+		// currentPlace = currentPlace.whosNext(lastPlace);	//Átveszi hova kell mennie és elmenti honnan jött, majd a szkeleton után
+		currentPlace = tohere;
 		lastPlace = templastplace;
 		System.out.println(this.toString()+" Atmozgott innen: "+lastPlace.toString()+" ide: "+currentPlace.toString() );	//Ezt ki is írjuk
 		if (nextCart!=null){			//Ha van rákötve kocsink akkor azt is "húzzuk"

@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class TunnelManager {
 		
 	private ArrayList<TunnelEntrace> entraces; //tunnel lista
-	private int activeEntraces=0;	//számon tartjuk, hogy hány darab aktív alagót szájunk van
+	private int activeEntraces=0;	//számon tartjuk, hogy hány darab aktív alagút szájunk van
 	
 	public boolean checkActives()	//ellenorizzuk, hogy kettonel kevesebb bejarat aktiv-e
 		{
