@@ -4,6 +4,13 @@ import java.util.Scanner;
 
 public class TunnelManager {
 	
+private String Name;
+	
+	public String toString() //kiírjuk a nevét a a manegernek
+		{
+			return "Name: " + Name; 
+		}
+	
 	public boolean checkActives()	//ellenorizzuk, hogy kettõnel kevesebb bejarat aktív-e
 		{
 			System.out.println("checkActives: Aktív két bejárat?");
