@@ -10,7 +10,7 @@ public class TunnelEntrace {
 	
 	public String toString()
 		{
-			return "Name: " + Name + " Activities:" +active; 
+			return "Name: " + Name + " Activities:" + active; 
 		}
 	
 	public void activate()
