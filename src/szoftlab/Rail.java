@@ -1,30 +1,30 @@
 package szoftlab;
 
-public class Rail {		//A sín osztály, a többi pályaelem is ebbõl származik.
+public class Rail {		//A sÃ­n osztÃ¡ly, a tÃ¶bbi pÃ¡lyaelem is ebbÅ‘l szÃ¡rmazik.
 	protected Rail neighbour_one;
 	protected Rail neighbour_two;
 	public String name;
-	protected Rail usedby;
+	protected Movable usedby;
 	
 	public Rail(String name){
 		this.name=name;
 	}
 	
-	public Rail whosNext(Rail lastplace){ //Ezzel kéri a mozdony, hogy melyik sínre kell mennie
+	public Rail whosNext(Rail lastplace){ //Ezzel keri a mozdony, hogy melyik sinre kell mennie
 		if (lastplace==neighbour_one){
-		return neighbour_two;}		//Attól függõen honnan jöttünk adja vissza
-		return neighbour_one;		//az egyik szomszédot.
+		return neighbour_two;}		//Attol fuggoen, hogy honnan jottunk adja vissza
+		return neighbour_one;		//az egyik szomszedot.
 	}
 	
-	public String toString(){ //Saját toString fv.
+	public String toString(){ //SajÃ¡t toString fv.
 		return "Rail "+name;
 	}
 	
-	public Rail amIUsed(){ //Megkérdezzük, hogy használatban van-e
+	public Movable amIUsed(){ //MegkÃ©rdezzÃ¼k, hogy ki hasznÃ¡lja
 		return usedby;
 	}
 	
-	public void setUsedBy(Rail usedby){ //Beállítjuk, hogy használva van-e a sín
+	public void setUsedBy(Movable usedby){ //Beallitjuk, hogy ki hasznalja a sint
 		this.usedby=usedby;
 	}
 	
