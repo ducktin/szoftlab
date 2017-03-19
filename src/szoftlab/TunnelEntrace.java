@@ -6,26 +6,26 @@ public class TunnelEntrace {
 
 	private String Name;
 	
-	public String toString() //kiírjuk a nevét a bejáratnak
+	public String toString() //kiirjuk a nevet a bejaratnak
 		{
 			return "Name: " + Name; 
 		}
 
 	
-	public void activate() //aktíváljuk a bejératot
+	public void activate() //aktivaljuk a bejaratot
 		{
-			TunnelManager tm=new TunnelManager(); //ezáltal hivatkozunk a tunnel managerre
+			TunnelManager tm=new TunnelManager(); //ezaltal hivatkozunk a tunnel managerre
 			System.out.println("activate: Aktiv?");
 			Scanner s1=new Scanner(System.in);
-			if(s1.equals(true)) //aktív az adott bejárat?
+			if(s1.equals("true")) //aktiv az adott bej�rat?
 				{
-					tm.Substractactive(this); //meghívjuk a TM deaktiváló függvényét
+					tm.Substractactive(this); //meghivjuk a TM deaktiv�l� fuggvenyet
 					s1.close();
 				}
 			else
 			{
 				s1.close();
-				tm.Addactive(this); //a TM aktiváló függvényét hívjuk
+				tm.Addactive(this); //a TM aktivalo fuggvenyet hivjuk
 			}
 			
 		}

@@ -2,23 +2,25 @@ package szoftlab;
 
 public class Station {
   private Color color;
+  private String name;
+  private Movable usedby;
   
-  public String toString() {	//Ez a Station toString függvénye ami a felhasználó számára fontos infókat kiírja std kimenetre
+  public String toString() {	//Ez a Station toString fuggvenye ami a felhasznalo szamara fontos infókat kiirja std kimenetre
 		return "Station: " + name;
   }
   
   public Station(){}
   
-  /* Kiüríti a paraméterként kapott kocsit
+  /* kiirja a parameterkent kapott kocsit
    * 
    */
   public void emptyCart(TrainCart t){
-    System.out.println(toString()+" kiüríti a " t.toString()+"kocsit");
+    System.out.println(toString()+" kiirja a " + t.toString()+"kocsit");
     t.empty();
   }
   
-  /* Beállítja, hogy ki van rajta,
-   * Lekérdezi a színét, majd ha jó akkor kiüríti
+  /* Beallitja, hogy ki van rajta,
+   * 
    */
   public void setUsedBy(Movable usedby){
 		this.usedby=usedby;

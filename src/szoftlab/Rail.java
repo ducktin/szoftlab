@@ -1,6 +1,6 @@
 package szoftlab;
 
-public class Rail {		//A sín osztály, a többi pályaelem is ebből származik.
+public class Rail {		//A sin osztaly, a tobbi palyaelem is ebbol szarmazik.
 	protected Rail neighbour_one;
 	protected Rail neighbour_two;
 	public String name;
