@@ -16,11 +16,11 @@ public class Rail {		//A sín osztály, a többi pályaelem is ebből származik
 		return neighbour_one;		//az egyik szomszedot.
 	}
 	
-	public String toString(){ //Saját toString fv.
+	public String toString(){ //Sajat toString fv.
 		return "Rail "+name;
 	}
 	
-	public Movable amIUsed(){ //Megkérdezzük, hogy ki használja
+	public Movable amIUsed(){ //Megkerdezzuk, hogy ki hasznalja
 		return usedby;
 	}
 	

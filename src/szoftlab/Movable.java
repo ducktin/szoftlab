@@ -1,6 +1,6 @@
 package szoftlab;
 
-public abstract class Movable {		//A Locomotive és a TrainCart õszosztálya
+public abstract class Movable {		//A Locomotive és a TrainCart õsosztálya
 	protected Rail lastPlace;		//Tárolja melyik helyen jártunk utoljára
 	protected Rail currentPlace;	//Illetve azt is, hogy most hol van
 	protected Movable nextCart;		//Az elsõ kocsi referenciája ami utána jön
