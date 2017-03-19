@@ -11,7 +11,19 @@ public class Locomotive extends Movable{
 	}
 	
 	public String toString() {	//Ez a Locomotive toString függvénye ami a felhasználó számára fontos infókat kiírja std kimenetre
-		return "Locomotive: "+name+" Currently on: "+currentPlace.toString();
+		return "Locomotive: "+name;
+	}
+
+	@Override
+	public boolean move(Rail tohere) {
+		Rail templastplace = this.currentPlace;		
+		currentPlace = currentPlace.whosNext(lastPlace);	//Átveszi hova kell mennie és elmenti honnan jött
+		lastPlace = templastplace;
+		System.out.println(this.toString()+" Atmozgott innen: "+lastPlace.toString()+" ide: "+currentPlace.toString() );	//Ezt ki is írjuk
+		if (nextCart!=null){			//Ha van rákötve kocsink akkor azt is "húzzuk"
+			nextCart.move(lastPlace);
+		}
+		return true;
 	}
 
 }

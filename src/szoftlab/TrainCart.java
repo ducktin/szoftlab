@@ -4,8 +4,8 @@ import java.awt.Color;
 
 public class TrainCart extends Movable{
 	public Color cartColor; //A kocsi színe
-	private boolean empty;  //Az érték, hogy a kocsi üres-e
-	private boolean isFirst; //Ezzel menti, hogy az elsõ nem üres kocsi-e
+	private Boolean empty;  //Az érték, hogy a kocsi üres-e
+	private Boolean isFirst; //Ezzel menti, hogy az elsõ nem üres kocsi-e
 	
 	@Override
 	public String toString() {	//A saját fv-nye amivel kiír a konzol ablakba
@@ -13,20 +13,35 @@ public class TrainCart extends Movable{
 		+" Color: "+cartColor.toString();
 	}
 
-	public boolean isEmpty() {
+	public Boolean isEmpty() {
 		return empty;
 	}
 
-	public void setEmpty(boolean empty) {
+	public void setEmpty(Boolean empty) {
 		this.empty = empty;
 	}
 
-	public boolean isFirst() { //Lekérdezhetõ, hogy ez-e az elsõ nemüres kocsi.
+	public Boolean getIsFirst() { //Lekérdezhetõ, hogy ez-e az elsõ nemüres kocsi.
 		return isFirst;
 	}
 
-	public void setFirst(boolean isFirst) { //Elsõ nemüres kocsivá állítás
+	public void setFirst(Boolean isFirst) { //Elsõ nemüres kocsivá állítás
 		this.isFirst = isFirst;
 	}
+	public void empty(){ //Kiüríti a kocsit. Ideális esetben az állomás hívja meg.
+		this.setEmpty(true);
+		System.out.println("Az alábbi kocsi kiürült: "+this.toString());
+	}
+
+	@Override
+	public boolean move(Rail tohere) {		//A mozgás függvénye a valósághoz hasonlóan passzív. Megkapja az elõtte lévõtõl, hogy hova kell mennie.
+		System.out.println("Ez a kocsi: "+toString()+"innen: "+currentPlace.toString()+"ide mozgott: "+tohere.toString());
+		lastPlace = currentPlace;
+		currentPlace=tohere;
+		if (nextCart!=null)			//Elhúzza következõ kocsit, ha van ilyen.
+			nextCart.move(lastPlace);
+		return true;
+	}
+	
 
 }

@@ -24,12 +24,8 @@ public abstract class Movable {		//A Locomotive és a TrainCart õszosztálya
 	public void setLastPlace(Rail lastPlace) {
 		this.lastPlace = lastPlace;
 	}
-	public Rail move(Rail lastPlace){		//Ez a mozgás függvény.
+	public abstract boolean move(Rail tohere);		//Ez a mozgás függvény, majd felül kell írni.
 		
-		//toDo
-		return lastPlace;
-		
-	}
 	public abstract String toString();
 	
 }
