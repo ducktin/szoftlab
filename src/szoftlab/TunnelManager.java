@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class TunnelManager {
 	
-	public boolean checkActives()	//ellenorizzuk, hogy kettonel kevesebb bejarat aktiv-e
+	public boolean checkActives()	//ellenorizzuk, hogy kettõnel kevesebb bejarat aktív-e
 		{
 			System.out.println("checkActives: Aktív két bejárat?");
 			Scanner s1=new Scanner(System.in);

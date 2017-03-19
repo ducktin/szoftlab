@@ -12,7 +12,7 @@ public class TunnelEntrace {
 		}
 
 	
-	public void activate() //aktíváljuk a bejératot
+	public void activate() //aktíváljuk a bejáratot
 		{
 			TunnelManager tm=new TunnelManager(); //ezáltal hivatkozunk a tunnel managerre
 			System.out.println("activate: Aktiv?");
