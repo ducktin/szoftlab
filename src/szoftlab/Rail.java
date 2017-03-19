@@ -6,6 +6,10 @@ public class Rail {		//A sín osztály, a többi pályaelem is ebbõl származik.
 	public String name;
 	protected Rail usedby;
 	
+	public Rail(String name){
+		this.name=name;
+	}
+	
 	public Rail whosNext(Rail lastplace){ //Ezzel kéri a mozdony, hogy melyik sínre kell mennie
 		if (lastplace==neighbour_one){
 		return neighbour_two;}		//Attól függõen honnan jöttünk adja vissza

@@ -16,8 +16,11 @@ public class SkeletonMethods {
 				for(Rail place : map.rails){	// Itt kell megnézni, hogy van-e ilyen hely ahova mehetünk.
 					if (place.name.equals(tohere)){
 						item.move(place);
+						s1.close();
+						return;
 					}
-				}	
+				}
+				System.out.println("Nincs ilyen palyaelem!");
 				
 		    }
 		}
