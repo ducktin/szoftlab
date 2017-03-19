@@ -20,8 +20,13 @@ public class TunnelEntrace {
 			if(s1.equals(true)) //aktív az adott bejárat?
 				{
 					tm.Substractactive(this); //meghívjuk a TM deaktiváló függvényét
+					s1.close();
 				}
-			else tm.Addactive(this); //a TM aktiváló függvényét hívjuk
+			else
+			{
+				s1.close();
+				tm.Addactive(this); //a TM aktiváló függvényét hívjuk
+			}
 			
 		}
 	

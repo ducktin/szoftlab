@@ -11,10 +11,15 @@ public class TunnelManager {
 			if(s1.equals(true)) //aktív két bejárat, így újat nem lehet felvenni
 				{
 					System.out.println("Nem lehet új bejáratot aktívvá tenni");
+					s1.close();
 					return true;
 				}
-			else return false; 
-			
+			else
+			{
+				s1.close();
+				return false;
+			}
+			 
 		}
 	
 	public void Addactive(TunnelEntrace te) //az adott tunnelentrace-t aktívvá tesszük, ha nem aktív
@@ -32,10 +37,14 @@ public class TunnelManager {
 							{
 								System.out.println("Kiépítem az alagutat köztük");
 							}
+						s1.close();
+						s2.close();
 						
 				}
 				else System.out.println("Nem tettem aktívvá"+ te.toString()+"-t" ); //nem tettük aktívvá a bejératot
+				s1.close();
 			}
+			
 			
 		}
 	
@@ -46,8 +55,10 @@ public class TunnelManager {
 			if(s1.equals(true)) //deaktiválni kell
 				{
 					System.out.println(te.toString() +" Deaktiváltam");
+					s1.close();
 				}
 			else System.out.println(te.toString() +" Aktív maradt"); 
+			s1.close();
 		}										
 	
 }
