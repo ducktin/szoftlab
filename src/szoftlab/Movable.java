@@ -1,9 +1,9 @@
 package szoftlab;
 
-public abstract class Movable {		//A Locomotive és a TrainCart õsosztálya
-	protected Rail lastPlace;		//Tárolja melyik helyen jártunk utoljára
+public abstract class Movable {		//A Locomotive és a TrainCart ososztalya
+	protected Rail lastPlace;		//Tarolja melyik helyen jartunk utoljara
 	protected Rail currentPlace;	//Illetve azt is, hogy most hol van
-	protected Movable nextCart;		//Az elsõ kocsi referenciája ami utána jön
+	protected Movable nextCart;		//Az elso kocsi referenciaja ami utana jon
 	protected String name;			//Az objektum neve, ez a Szkeletonhoz fontos
 	
 	public Movable getNextCart() {
@@ -24,7 +24,7 @@ public abstract class Movable {		//A Locomotive és a TrainCart õsosztálya
 	public void setLastPlace(Rail lastPlace) {
 		this.lastPlace = lastPlace;
 	}
-	public abstract boolean move(Rail tohere);		//Ez a mozgás függvény, majd felül kell írni.
+	public abstract boolean move(Rail tohere);		//Ez a mozgas fuggveny, majd felul kell irni.
 		
 	public abstract String toString();
 	
