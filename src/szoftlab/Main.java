@@ -4,7 +4,8 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		SkeletonMethods.TrainMover();
+		Map map = new Map();
+		SkeletonMethods.TrainMover(map);
 		
 	}
 

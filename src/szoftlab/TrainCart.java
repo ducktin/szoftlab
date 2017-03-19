@@ -7,6 +7,10 @@ public class TrainCart extends Movable{
 	private Boolean empty;  //Az érték, hogy a kocsi üres-e
 	private Boolean isFirst; //Ezzel menti, hogy az elsõ nem üres kocsi-e
 	
+	public TrainCart(){
+		
+	}
+	
 	@Override
 	public String toString() {	//A saját fv-nye amivel kiír a konzol ablakba
 		return "TrainCart: "+"name"+" Currently on: "+currentPlace.toString()
