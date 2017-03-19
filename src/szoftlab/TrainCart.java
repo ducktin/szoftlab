@@ -1,14 +1,16 @@
 package szoftlab;
 
-import java.awt.Color;
-
 public class TrainCart extends Movable{
-	public Color cartColor; //A kocsi színe
-	private Boolean empty;  //Az érték, hogy a kocsi üres-e
-	private Boolean isFirst; //Ezzel menti, hogy az elsõ nem üres kocsi-e
+	public Color cartColor; //A kocsi szÃ­ne
+	private Boolean empty;  //Az Ã©rtÃ©k, hogy a kocsi Ã¼res-e
+	private Boolean isFirst; //Ezzel menti, hogy az elsÃµ nem Ã¼res kocsi-e
+	
+	public TrainCart(){
+		
+	}
 	
 	@Override
-	public String toString() {	//A saját fv-nye amivel kiír a konzol ablakba
+	public String toString() {	//A sajÃ¡t fv-nye amivel kiÃ­r a konzol ablakba
 		return "TrainCart: "+"name"+" Currently on: "+currentPlace.toString()
 		+" Color: "+cartColor.toString();
 	}
@@ -21,24 +23,24 @@ public class TrainCart extends Movable{
 		this.empty = empty;
 	}
 
-	public Boolean getIsFirst() { //Lekérdezhetõ, hogy ez-e az elsõ nemüres kocsi.
+	public Boolean getIsFirst() { //LekÃ©rdezhetÃµ, hogy ez-e az elsÃµ nemÃ¼res kocsi.
 		return isFirst;
 	}
 
-	public void setFirst(Boolean isFirst) { //Elsõ nemüres kocsivá állítás
+	public void setFirst(Boolean isFirst) { //ElsÃµ nemÃ¼res kocsivÃ¡ Ã¡llÃ­tÃ¡s
 		this.isFirst = isFirst;
 	}
-	public void empty(){ //Kiüríti a kocsit. Ideális esetben az állomás hívja meg.
+	public void empty(){ //KiÃ¼rÃ­ti a kocsit. IdeÃ¡lis esetben az Ã¡llomÃ¡s hÃ­vja meg.
 		this.setEmpty(true);
-		System.out.println("Az alábbi kocsi kiürült: "+this.toString());
+		System.out.println("Az alÃ¡bbi kocsi kiÃ¼rÃ¼lt: "+this.toString());
 	}
 
 	@Override
-	public boolean move(Rail tohere) {		//A mozgás függvénye a valósághoz hasonlóan passzív. Megkapja az elõtte lévõtõl, hogy hova kell mennie.
+	public boolean move(Rail tohere) {		//A mozgÃ¡s fÃ¼ggvÃ©nye a valÃ³sÃ¡ghoz hasonlÃ³an passzÃ­v. Megkapja az elÃµtte lÃ©vÃµtÃµl, hogy hova kell mennie.
 		System.out.println("Ez a kocsi: "+toString()+"innen: "+currentPlace.toString()+"ide mozgott: "+tohere.toString());
 		lastPlace = currentPlace;
 		currentPlace=tohere;
-		if (nextCart!=null)			//Elhúzza következõ kocsit, ha van ilyen.
+		if (nextCart!=null)			//ElhÃºzza kÃ¶vetkezÃµ kocsit, ha van ilyen.
 			nextCart.move(lastPlace);
 		return true;
 	}

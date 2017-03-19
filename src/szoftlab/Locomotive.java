@@ -14,7 +14,7 @@ public class Locomotive extends Movable{
 		return "Locomotive: "+name;
 	}
 
-	@Override
+	@Override	//Még meg kell írni ,hogy beállítsa a sín usedby-ját
 	public boolean move(Rail tohere) {
 		Rail templastplace = this.currentPlace;		
 		// currentPlace = currentPlace.whosNext(lastPlace);	//Átveszi hova kell mennie és elmenti honnan jött, majd a szkeleton után
