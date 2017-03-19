@@ -3,8 +3,8 @@ package szoftlab;
 import java.util.ArrayList;
 
 public class Map {
-	ArrayList<Locomotive> locomotives;
-	ArrayList<Rail> rails;
+	ArrayList<Locomotive> locomotives = new ArrayList<Locomotive>();
+	ArrayList<Rail> rails = new ArrayList<Rail>();
 	TunnelManager tunnelman;
 	
 	public void createTrain(EntryPoint e, Color c){
