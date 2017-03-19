@@ -4,7 +4,7 @@ public class Rail {		//A sín osztály, a többi pályaelem is ebbõl származik.
 	protected Rail neighbour_one;
 	protected Rail neighbour_two;
 	protected String name;
-	protected boolean usedby;
+	protected Rail usedby;
 	
 	public Rail whosNext(Rail lastplace){ //Ezzel kéri a mozdony, hogy melyik sínre kell mennie
 		if (lastplace==neighbour_one){
@@ -16,12 +16,12 @@ public class Rail {		//A sín osztály, a többi pályaelem is ebbõl származik.
 		return "Rail "+name;
 	}
 	
-	public boolean amIUsed(){ //Megkérdezzük, hogy használatban van-e
+	public Rail amIUsed(){ //Megkérdezzük, hogy használatban van-e
 		return usedby;
 	}
 	
-	public void setUsedBy(boolean used){ //Beállítjuk, hogy használva van-e a sín
-		this.usedby=used;
+	public void setUsedBy(Rail usedby){ //Beállítjuk, hogy használva van-e a sín
+		this.usedby=usedby;
 	}
 	
 	public void connect(Rail one, Rail two){
