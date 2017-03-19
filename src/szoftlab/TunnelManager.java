@@ -1,68 +1,74 @@
 package szoftlab;
 
-import java.util.ArrayList;
+import java.util.Scanner;
 
 public class TunnelManager {
-		
-	private ArrayList<TunnelEntrace> entraces; //tunnel lista
-	private int activeEntraces=0;	//számon tartjuk, hogy hány darab aktív alagút szájunk van
+
+	private String Name;
+	
+	public String toString() //kiÃ­rjuk a nevÃ©t a managernek
+		{
+			return "Name: " + Name; 
+		}
 	
 	public boolean checkActives()	//ellenorizzuk, hogy kettonel kevesebb bejarat aktiv-e
 		{
-			if(activeEntraces<2)	
+			System.out.println("checkActives: AktÃ­v kÃ©t bejÃ¡rat?");
+			Scanner s1=new Scanner(System.in);
+			if(s1.equals(true)) //aktÃ­v kÃ©t bejÃ¡rat, Ã­gy Ãºjat nem lehet felvenni
 				{
+					System.out.println("Nem lehet Ãºj bejÃ¡ratot aktÃ­vvÃ¡ tenni");
+					s1.close();
 					return true;
 				}
-			else return false;
+			else
+			{
+				s1.close();
+				return false;
+			}
+			 
 		}
 	
-	public void Addactive(TunnelEntrace te) //az adott tunnelentrace-t aktívvá tesszük, ha nem aktív
+	public void Addactive(TunnelEntrace te) //az adott tunnelentrace-t aktÃ­vvÃ¡ tesszÃ¼k, ha nem aktÃ­v
 		{
-			if(checkActives()==true)
+			if(checkActives()==false)	//azt mondta a felhasznÃ¡lÃ³, hogy nincs kÃ©t aktÃ­v bejÃ¡rat	
+			{
+				System.out.println("Addactive: AktÃ­vvÃ¡ tegyem?"+ te.toString());
+				Scanner s1=new Scanner(System.in);
+				if(s1.equals(true)) //aktÃ­vvÃ¡ tesszÃ¼k a bejÃ¡raot
 				{
-					if(te.GetActive()==false)	//aktivitás vizsgálat
-						{
-							te.activate();
-							activeEntraces++;
-							if(activeEntraces==2)
-								BuildTunnel();
-						}
-					else Substractactive(te);
+					System.out.println(te.toString()+" aktÃ­v lett");
+					System.out.println("Van mÃ¡r kÃ©t aktÃ­v bejÃ¡rat?");
+					Scanner s2=new Scanner(System.in);
+						if(s2.equals(true)) //volt kÃ©t aktÃ­v, ki kell Ã©pÃ­teni kÃ¶ztÃ¼k az alagutat
+							{
+								System.out.println("KiÃ©pÃ­tem az alagutat kÃ¶ztÃ¼k");
+							}
+						s1.close();
+						s2.close();
+						
 				}
+				else System.out.println("Nem tettem aktÃ­vvÃ¡"+ te.toString()+"-t" ); //nem tettÃ¼k aktÃ­vvÃ¡ a bejÃ©ratot
+				s1.close();
+			}
+			
 			
 		}
 	
-	public void Substractactive(TunnelEntrace te)
+	public void Substractactive(TunnelEntrace te) //deaktivÃ¡lÃ¡sa a bejÃ¡ratnak
 		{
-			te.deactivate();
-			activeEntraces--;
-		}
-	public void Connect(TunnelEntrace te1, TunnelEntrace te2)
-		{
-			System.out.print("Kiépül a kapcsolat a "+ te1.GetName()
-								+ " és " + te2.GetName()+ " között.");
-		}
-	
-	public void BuildTunnel() //megkeresi a tunnel listában az aktív tunnelentraceket, 
-							  //és kiépit köztük egy alagutat
-		{
-			int i=0,j=i+1; //a listát ezen változók segítségével járjuk be
-			while(i <entraces.size())
+			System.out.println("deactive: DeaktivÃ¡ljam?" +te.toString());
+			Scanner s1=new Scanner(System.in);
+			if(s1.equals(true)) //deaktivÃ¡lni kell
 				{
-					if(entraces.get(i).GetActive()==true) //aktív-e?
-						break; //elsõ aktív tunnelt megtaláltuk
-					else i++;
+					System.out.println(te.toString() +" DeaktivÃ¡ltam");
+					s1.close();
 				}
-			
-			while(j <entraces.size()) //mivel j=i+1, ezért rögtön 
-										//az elsõ aktív utáni tunnelt vizsgálja
-				{
-					if(entraces.get(j).GetActive()==true)
-						break; //második aktív tunnelt megtaláltuk
-					else j++;
-				}
-				Connect(entraces.get(i), entraces.get(j)); //összekapcsolja a két tunnelentrace-t
-		}												
+			else System.out.println(te.toString() +" AktÃ­v maradt"); 
+			s1.close();
+		}										
 	
 }
+
+
 
