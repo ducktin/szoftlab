@@ -1,10 +1,10 @@
 package szoftlab;
 
-public abstract class Movable {
-	private Rail lastPlace;
-	private Rail currentPlace;
-	private Movable nextCart;
-	private String name;
+public abstract class Movable {		//A Locomotive és a TrainCart õszosztálya
+	protected Rail lastPlace;		//Tárolja melyik helyen jártunk utoljára
+	protected Rail currentPlace;	//Illetve azt is, hogy most hol van
+	protected Movable nextCart;		//Az elsõ kocsi referenciája ami utána jön
+	protected String name;			//Az objektum neve, ez a Szkeletonhoz fontos
 	
 	public Movable getNextCart() {
 		return nextCart;
@@ -24,7 +24,7 @@ public abstract class Movable {
 	public void setLastPlace(Rail lastPlace) {
 		this.lastPlace = lastPlace;
 	}
-	public Rail move(Rail lastPlace){
+	public Rail move(Rail lastPlace){		//Ez a mozgás függvény.
 		
 		//toDo
 		return lastPlace;
