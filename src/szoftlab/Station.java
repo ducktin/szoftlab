@@ -14,7 +14,7 @@ public class Station {
 	  
 	  name = n;
 	  color = c;
-	  r = place;
+	  r = place; //helye
 	  
 	  
   }
