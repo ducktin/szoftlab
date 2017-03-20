@@ -3,8 +3,7 @@ package szoftlab;
 public class Station extends Rail {
   
 
-private Color color;
-  private String name;
+  private Color color;
   private Movable usedby;
   public  Rail r;
   

@@ -12,6 +12,7 @@ public class Switch extends Rail{
 		// TODO Auto-generated constructor stub
 	}
 	
+	@Override
 	public String toString(){
 		return "Switch "+ name;
 		

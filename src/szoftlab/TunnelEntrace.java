@@ -5,17 +5,12 @@ import java.util.Scanner;
 public class TunnelEntrace extends Rail {
 
 	public TunnelEntrace(String name) {
-		super(name);
-		Name=name;		
+		super(name);	
 	}
-
-
-
-	private String Name;
 	
 	public String toString() //kiirjuk a nevet a bejaratnak
 		{
-			return "Name: " + Name; 
+			return "Tunnel " + name; 
 		}
 	
 
