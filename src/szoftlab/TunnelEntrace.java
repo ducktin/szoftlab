@@ -5,17 +5,14 @@ import java.util.Scanner;
 public class TunnelEntrace extends Rail {
 
 	public TunnelEntrace(String name) {
-		super(name);
-		Name=name;		
+		super(name);	
 	}
-
-
-
-	private String Name;
+	
 	
 	public String toString() //kiirjuk a nevet a bejaratnak
-		{
-			return Name; 
+		{ 
+			return "Tunnel " + name; 
+
 		}
 	
 
@@ -26,6 +23,7 @@ public class TunnelEntrace extends Rail {
 			System.out.println("activate: Aktiv?");
 			Scanner s1=new Scanner(System.in);
 			String answer=s1.nextLine();
+			
 			if(answer.equals("true")) //aktiv az adott bejárat?
 				{
 					tm.Substractactive(this); //meghivjuk a TM deaktiváló fuggvenyet

@@ -60,9 +60,10 @@ public class TunnelManager {
 	
 	public void Substractactive(TunnelEntrace te) //deaktiválása a bejáratnak
 		{
-			System.out.println("deactive: Deaktiváljam?" +te.toString());
+			System.out.println("deactive: Deaktiváljam? " +te.toString());
 			Scanner s1=new Scanner(System.in);
-			if(s1.equals("true")) //deaktiválni kell
+			String answer=s1.nextLine();
+			if(answer.equals("true")) //deaktiválni kell
 				{
 					System.out.println(te.toString() +" Deaktiváltam");
 					s1.close();

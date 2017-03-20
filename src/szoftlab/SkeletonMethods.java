@@ -68,6 +68,25 @@ public class SkeletonMethods {
 		sw2.addNeighbour(r5);
 		sw2.connect(t2, r1);
 		
+		TrainCart tc1 = new TrainCart(sw2, null, "cart1", Color.GREEN);		//Kocsi letrehozasa
+		Locomotive l1 = new Locomotive(r1, tc1, "locomotive1");				//Mozdony letrehozasa
+		
+		map.locomotives.add(l1);		//Palyara tenni minden elemet
+		map.traincarts.add(tc1);
+		map.rails.add(r1);
+		map.rails.add(t1);
+		map.rails.add(r2);
+		map.rails.add(s1);
+		map.rails.add(sw1);
+		map.rails.add(t2);
+		map.rails.add(r3);
+		map.rails.add(r4);
+		map.rails.add(sw2);
+		map.rails.add(r5);
+		System.out.println("A fentieket olvasd el, fontos!");
+		
+		
+		
 	}
 	
 	
