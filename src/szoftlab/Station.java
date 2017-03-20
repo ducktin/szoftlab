@@ -1,6 +1,6 @@
 package szoftlab;
 
-public class Station {
+public class Station extends Rail {
   
 
 private Color color;
@@ -13,8 +13,7 @@ private Color color;
   }
  
   public Station(String name, Color c,Rail place){
-	  
-	 
+	  super(name);
 	  color = c;
 	  r = place; //helye
 	  
