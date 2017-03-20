@@ -20,7 +20,7 @@ public class TunnelEntrace extends Rail {
 	public void activate() //aktivaljuk a bejaratot
 		{
 			TunnelManager tm=new TunnelManager(); //ezaltal hivatkozunk a tunnel managerre
-			System.out.println("activate: Aktiv?");
+			System.out.println("activate: Aktiv?" +name);
 			Scanner s1=new Scanner(System.in);
 			String answer=s1.nextLine();
 			

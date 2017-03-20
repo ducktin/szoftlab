@@ -7,19 +7,15 @@ import java.util.Scanner;
 
 public class Main {
 
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) throws IOException {		
 		
-		TunnelEntrace t1=new TunnelEntrace("Tunnel1");
-		t1.activate();
-		
-		
-		
-		/*Map map = new Map();
+		Map map = new Map();
 		
 		String choice = null;
-        Scanner scan = new Scanner(System.in);
+        
 		
 		do{
+			Scanner scan = new Scanner(System.in);
 			
 			System.out.println("Alabbi szekvenciak kozul valaszthatsz:\n (0:kilepes)"
 					+"1. Tesztpalya inicializasa\n"
@@ -34,7 +30,7 @@ public class Main {
 			line = br.readLine();
 			if(line.equals("0")) break;
 			//br.close();*/
-			/*choice = scan.nextLine();
+			choice = scan.nextLine();
 			
 			switch(choice){
 			case "1":
@@ -86,9 +82,6 @@ public class Main {
 				TunnelEntrace te2 = new TunnelEntrace("te2");
 				TunnelEntrace te3 = new TunnelEntrace("te3");
 				te1.activate();
-				te2.activate();
-				te3.activate();
-				
 				
 				
 				break;
@@ -99,7 +92,7 @@ public class Main {
 			default:
 				break;
 			}
-			//scan.close();
+			scan.close();
 		}while(true);
 		
 
