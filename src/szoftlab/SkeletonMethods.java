@@ -4,9 +4,8 @@ import java.util.Scanner;
 
 public class SkeletonMethods {
 		
-	public static void TrainMover(Map map){
+	public static void TrainMover(Map map, Scanner s1){
 		System.out.println("Ki mozogjon? Kerem a nevet:");
-		Scanner s1 = new Scanner(System.in);
 		String tomove = s1.nextLine(); 
 		for (Locomotive item : map.locomotives) {	// Itt kell megnezni, hogy van-e ilyen vonatunk.
 		    if (item.name.equals(tomove)){
@@ -16,7 +15,6 @@ public class SkeletonMethods {
 				for(Rail place : map.rails){	// Itt kell megnezni, hogy van-e ilyen hely ahova mehetunk.
 					if (place.name.equals(tohere)){  //Ha minden stimmel, mozgatunk.
 						item.move(place);
-						s1.close();
 						return;
 					}
 				}
@@ -24,17 +22,15 @@ public class SkeletonMethods {
 				
 		    }
 		}
-		s1.close();
 		System.out.println("Nincs ilyen vonat!");
 	}
 	
-	public static void Switchswitcher(Map map){		//Valtoallitas a felhasznalo kereseinek megfeleloen
+	public static void Switchswitcher(Map map, Scanner s1){		//Valtoallitas a felhasznalo kereseinek megfeleloen
 		System.out.println("Kit valtsunk? Kerem a nevet:");
-		Scanner s1 = new Scanner(System.in);
 		String who = s1.nextLine(); 
 		for(Rail item : map.rails){
 			if(item.name.equals(who)){
-				item.setNeighbourtwo();
+				item.setNeighbourTwo(s1);
 				System.out.println(item.toString()+" allasa mostantol "+item.neighbour_two.toString()+" fele all.");
 			}
 		}
@@ -44,7 +40,7 @@ public class SkeletonMethods {
 		Rail r1 = new Rail("rail1");
 		TunnelEntrace t1 = new TunnelEntrace("tunnel1");
 		Rail r2 = new Rail("rail2");
-		Station s1 = new Station("station1", Color.GREEN, r1);
+		Station s1 = new Station("station1", Color.GREEN);
 		Switch sw1 = new Switch("switch1");
 		TunnelEntrace t2 = new TunnelEntrace("tunnel2");
 		Rail r3 = new Rail("rail3");
@@ -83,7 +79,7 @@ public class SkeletonMethods {
 		map.rails.add(r4);
 		map.rails.add(sw2);
 		map.rails.add(r5);
-		System.out.println("A fentieket olvasd el, fontos!");
+		System.out.println("\n A fentieket olvasd el, fontos! \n");
 		
 		
 		

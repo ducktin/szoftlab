@@ -12,10 +12,14 @@ public class Main {
 		Map map = new Map();
 		
 		String choice = null;
+		
+		Scanner scan = new Scanner(System.in);
+		
+		boolean game = true;
         
 		
 		do{
-			Scanner scan = new Scanner(System.in);
+			
 			
 			System.out.println("Alabbi szekvenciak kozul valaszthatsz:\n (0:kilepes)"
 					+"1. Tesztpalya inicializasa\n"
@@ -38,7 +42,7 @@ public class Main {
 				break;
 			
 			case "2":
-				SkeletonMethods.TrainMover(map);
+				SkeletonMethods.TrainMover(map, scan);
 				break;
 			case "3":
 				
@@ -55,7 +59,7 @@ public class Main {
 				map.rails.add(r3);
 				map.rails.add(r4);	
 				map.rails.add(r5);
-				SkeletonMethods.TrainMover(map);
+				SkeletonMethods.TrainMover(map, scan);
 				//Stationra erkezes szimulacioja
 				
 				
@@ -86,15 +90,19 @@ public class Main {
 				
 				break;
 			case "5":
-				SkeletonMethods.Switchswitcher(map);
+				SkeletonMethods.Switchswitcher(map, scan);
 				break;
+				
+			case "0":
+				game = false;
 					
 			default:
 				break;
 			}
-			scan.close();
-		}while(true);
+			
+		}while(game);
 		
+		scan.close();
 
 
 		/*Rail r1 = new Rail("r1");		//Ez egy proba a mukodes Zoli

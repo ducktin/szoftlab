@@ -17,7 +17,7 @@ public class EntryPoint extends Rail {
    *
    */
   public void createTrain(){
-    System.out.println(toString()+" letrehozott egy vonatot ";
+    System.out.println(toString()+" letrehozott egy vonatot ");
   }
   
   /* Beallitja, hogy ki van rajta
@@ -32,6 +32,6 @@ public class EntryPoint extends Rail {
   }
   public void connect(Rail r){
 		this.neighbour_one=r;
-		System.out.println(toString()+" szomszeda mostantol: "+r.toString();
+		System.out.println(toString()+" szomszeda mostantol: "+r.toString());
   }
 }
