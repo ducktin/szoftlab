@@ -24,8 +24,7 @@ public class TrainCart extends Movable{
 	
 	@Override
 	public String toString() {	//A sajat fv-nye amivel kiir a konzol ablakba
-		return "TrainCart: "+"name"+" Currently on: "+currentPlace.toString()
-		+" Color: "+cartColor.toString();
+		return "TrainCart: "+name+" Color: "+cartColor.toString();
 	}
 
 	public Boolean isEmpty() {
@@ -50,7 +49,7 @@ public class TrainCart extends Movable{
 
 	@Override
 	public boolean move(Rail tohere) {		//A mozgas fuggvenye a valosaghoz hasonloan passziv. Megkapja az elitte levotol, hogy hova kell mennie.
-		System.out.println("Ez a kocsi: "+toString()+"innen: "+currentPlace.toString()+"ide mozgott: "+tohere.toString());
+		System.out.println("Ez a kocsi: "+toString()+" innen: "+currentPlace.toString()+"ide mozgott: "+tohere.toString());
 		lastPlace = currentPlace;
 		currentPlace=tohere;
 		if (nextCart!=null)			//Elhuzza kovetkezo kocsit, ha van ilyen.
