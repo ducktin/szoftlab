@@ -7,6 +7,7 @@ public class Locomotive extends Movable{
 		this.currentPlace=currentPlace;
 		this.nextCart=nextCart;
 		this.name=name;
+		System.out.println(toString()+" letrehozva itt: "+currentPlace.toString());
 	}
 	
 	public String toString() {	//Ez a Locomotive toString fuggvenye ami a felhasznalo szamara fontos infokat kiirja a std kimenetre

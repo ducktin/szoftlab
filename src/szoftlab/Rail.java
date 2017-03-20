@@ -8,6 +8,7 @@ public class Rail {		//A sin osztaly, a tobbi palyaelem is ebbol szarmazik.
 	
 	public Rail(String name){
 		this.name=name;
+		System.out.println(toString()+" letrehozva");
 	}
 	
 	public Rail whosNext(Rail lastplace){ //Ezzel keri a mozdony, hogy melyik sinre kell mennie
