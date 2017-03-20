@@ -40,7 +40,7 @@ public class SkeletonMethods {
 		Rail r1 = new Rail("rail1");
 		TunnelEntrace t1 = new TunnelEntrace("tunnel1");
 		Rail r2 = new Rail("rail2");
-		Station s1 = new Station("station1", Color.GREEN, r1);
+		Station s1 = new Station("station1", Color.GREEN);
 		Switch sw1 = new Switch("switch1");
 		TunnelEntrace t2 = new TunnelEntrace("tunnel2");
 		Rail r3 = new Rail("rail3");
@@ -79,7 +79,7 @@ public class SkeletonMethods {
 		map.rails.add(r4);
 		map.rails.add(sw2);
 		map.rails.add(r5);
-		System.out.println("A fentieket olvasd el, fontos!");
+		System.out.println("\n A fentieket olvasd el, fontos! \n");
 		
 		
 		
