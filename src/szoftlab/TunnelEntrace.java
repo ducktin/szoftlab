@@ -11,7 +11,7 @@ public class TunnelEntrace extends Rail {
 	
 	public String toString() //kiirjuk a nevet a bejaratnak
 		{ 
-			return "Tunnel " + name; 
+			return "TunnelEntrace " + name; 
 
 		}
 	
@@ -20,7 +20,7 @@ public class TunnelEntrace extends Rail {
 	public void activate() //aktivaljuk a bejaratot
 		{
 			TunnelManager tm=new TunnelManager(); //ezaltal hivatkozunk a tunnel managerre
-			System.out.println("activate: Aktiv?");
+			System.out.println("activate: Aktiv?" +name);
 			Scanner s1=new Scanner(System.in);
 			String answer=s1.nextLine();
 			
@@ -31,8 +31,9 @@ public class TunnelEntrace extends Rail {
 				}
 			else
 			{
-				s1.close();
 				tm.Addactive(this); //a TM aktivalo fuggvenyet hivjuk
+				s1.close();
+				
 			}
 			
 		}

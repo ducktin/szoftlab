@@ -19,12 +19,12 @@ public class TunnelManager {
 			if(answer.equals("true")) //aktiv ket bejarat, igy ujat nem lehet felvenni
 				{
 					System.out.println("Nem lehet uj bejaratot aktivva tenni");
-					s1.close();
+					
 					return true;
 				}
 			else
 			{
-				s1.close();
+				
 				return false;
 			}
 			 
