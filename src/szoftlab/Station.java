@@ -1,5 +1,7 @@
 package szoftlab;
 
+import java.util.Scanner;
+
 public class Station extends Rail {
   
 
@@ -26,9 +28,15 @@ public class Station extends Rail {
   /* Kiuriti a parameterkent kapott kocsit
    * 
    */
-  public void emptyCart(TrainCart t){
-    System.out.println(toString()+" kiirja a " + t.toString()+"kocsit");
-    t.empty();
+  public void emptyCart(TrainCart t, Scanner s1){
+	  System.out.println("emptyCart: Egyezik az állomás és a kocsi színe");
+	  String answer=s1.nextLine();
+	  if(answer.equals("true"))
+	  	{
+		  System.out.println(toString()+" kuriti a " + t.toString()+"kocsit");
+		    t.empty();
+	  	}
+    
   }
   
   /* Beallitja, hogy ki van rajta,

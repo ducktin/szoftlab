@@ -27,6 +27,7 @@ public class Main {
 					+"3. Kocsi allomasokhoz erkezese\n"
 					+"4. Alagutszaj aktivalasa\n"
 					+"5. Valto allitasa\n"
+					+"6. Üzközés\n"
 					);
 			
 			//Scanner scan = new Scanner(System.in);
@@ -65,32 +66,34 @@ public class Main {
 				
 				if(tr1.getIsFirst()){ //ha if nincs akkor no line found
 					
-					if((tr1.currentPlace == st1) && (tr1.cartColor == st1.getColor())){
+					if((tr1.currentPlace == st1)){
 						tr1.empty();//kiurul a kocsi es az empty true lesz 
 						
 						
 					}
 					else
 						System.out.println("Nem egyezik a szinuk");
-				}
-					
-			
-				
-				
-				
+				}		
 				
 				break;
 			case "4":
-				//Implementalasa kikommentezbe a TunnelEntrace es TunnelManager osztalyokban
 				TunnelEntrace te1 = new TunnelEntrace("te1");
-				TunnelEntrace te2 = new TunnelEntrace("te2");
-				TunnelEntrace te3 = new TunnelEntrace("te3");
 				te1.activate(scan);
 				
 				
 				break;
 			case "5":
 				SkeletonMethods.Switchswitcher(map, scan);
+				break;
+				
+			case "6":
+				Rail r1=new Rail("r1");
+				Rail r2=new Rail("r2");
+				Rail r8=new Rail("r3");
+				
+				Locomotive l1=new Locomotive(r1,null,"l1");
+				Locomotive l5=new Locomotive(r8,null,"l5");
+				
 				break;
 				
 			case "0":

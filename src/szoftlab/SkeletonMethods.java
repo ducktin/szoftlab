@@ -12,12 +12,24 @@ public class SkeletonMethods {
 		    	System.out.println(tomove+" moving");
 		    	System.out.println("Hova mozogjon? Kerem a nevet:");
 				String tohere = s1.nextLine(); 
-				for(Rail place : map.rails){	// Itt kell megnezni, hogy van-e ilyen hely ahova mehetunk.
-					if (place.name.equals(tohere)){  //Ha minden stimmel, mozgatunk.
-						item.move(place);
-						return;
+				System.out.println("Van ott vki?");
+				String use=s1.nextLine();
+				if(use.equals("true"))
+					{
+						System.out.println("Ütközés történt");
 					}
-				}
+				else
+					{
+						for(Rail place : map.rails)
+						{	// Itt kell megnezni, hogy van-e ilyen hely ahova mehetunk.
+							if (place.name.equals(tohere))
+							{  //Ha minden stimmel, mozgatunk.
+								item.move(place);
+								return;
+							}
+						}
+					}
+				
 				System.out.println("Nincs ilyen palyaelem!");
 				
 		    }
