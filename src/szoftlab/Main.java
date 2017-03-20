@@ -92,7 +92,7 @@ public class Main {
 				
 				break;
 			case "5":
-				SkeletonMethods.Switchswitcher(map);
+				SkeletonMethods.Switchswitcher(map, scan);
 				break;
 					
 			default:

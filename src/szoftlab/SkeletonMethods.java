@@ -25,13 +25,12 @@ public class SkeletonMethods {
 		System.out.println("Nincs ilyen vonat!");
 	}
 	
-	public static void Switchswitcher(Map map){		//Valtoallitas a felhasznalo kereseinek megfeleloen
+	public static void Switchswitcher(Map map, Scanner s1){		//Valtoallitas a felhasznalo kereseinek megfeleloen
 		System.out.println("Kit valtsunk? Kerem a nevet:");
-		Scanner s1 = new Scanner(System.in);
 		String who = s1.nextLine(); 
 		for(Rail item : map.rails){
 			if(item.name.equals(who)){
-				item.setNeighbourtwo();
+				item.setNeighbourTwo(s1);
 				System.out.println(item.toString()+" allasa mostantol "+item.neighbour_two.toString()+" fele all.");
 			}
 		}

@@ -1,5 +1,7 @@
 package szoftlab;
 
+import java.util.Scanner;
+
 public class Rail {		//A sin osztaly, a tobbi palyaelem is ebbol szarmazik.
 	protected Rail neighbour_one;
 	protected Rail neighbour_two;
@@ -35,7 +37,8 @@ public class Rail {		//A sin osztaly, a tobbi palyaelem is ebbol szarmazik.
 		System.out.println(toString()+" szomszedai mostantol: "+one.toString()+" es "+two.toString());
 	}
 	
-	public void setNeighbourtwo() {
+	public void setNeighbourTwo(Scanner s1){
+		
 	}
 	
 }

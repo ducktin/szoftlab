@@ -18,20 +18,20 @@ public class Switch extends Rail{
 		
 	}
 	
-	public void setNeighbourTwo(){
+	@Override
+	public void setNeighbourTwo(Scanner s1){
 		System.out.println("Ki legyen a szomszed?\n");
 		for(Rail items : additionalNeighbours){		//Kilistazzuk a lehetseges szomszedokat
-			System.out.println(items.toString()+"\n");
-		}
-		Scanner s1 = new Scanner(System.in);	//Bekerjuk a valsztast
-		String forthis = s1.nextLine();			
+			System.out.println(items.toString());
+		}	
+		String forthis = s1.nextLine();		//Bekerjuk a valsztast	
 		for (Rail items : additionalNeighbours){		//Ellenorizzuk, hogy jo volt-e a valasztas
 			if(items.name.equals(forthis)){
 				neighbour_two = items;		//Ha igen akkor beallitjuk
+				return;
 			}
 		}
 		System.out.println("Nincs ilyen szomszedja ennek a valtonak!");
-		s1.close();
 		
 	}
 	
