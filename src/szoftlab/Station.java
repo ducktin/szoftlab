@@ -4,12 +4,23 @@ public class Station {
   private Color color;
   private String name;
   private Movable usedby;
+  public  Rail r;
   
   public String toString() {	//Ez a Station toString fuggvenye ami a felhasznalo szamara fontos infókat kiirja std kimenetre
 		return "Station: " + name;
   }
   
-  public Station(){}
+  public Station(String n, Color c,Rail place){
+	  
+	  name = n;
+	  color = c;
+	  r = place;
+	  
+	  
+  }
+  public Color getColor(){
+	  return color;
+  }
   
   /* kiirja a parameterkent kapott kocsit
    * 

@@ -15,13 +15,15 @@ public class Locomotive extends Movable{
 
 	@Override	//Meg meg kell irni ,hogy beallitsa a san usedby-jat
 	public boolean move(Rail tohere) {
-		// currentPlace = currentPlace.whosNext(lastPlace);	//Átveszi hova kell mennie és elmenti honnan jött, majd a szkeleton után
+		// currentPlace = currentPlace.whosNext(lastPlace);	//ï¿½tveszi hova kell mennie ï¿½s elmenti honnan jï¿½tt, majd a szkeleton utï¿½n
 		lastPlace = this.currentPlace;
 		currentPlace = tohere;
 		
-		System.out.println(this.toString()+" Atmozgott innen: "+lastPlace.toString()+" ide: "+currentPlace.toString() );	//Ezt ki is írjuk
-		if (nextCart!=null){			//Ha van rakötve kocsink akkor azt is "huzzuk"
+		System.out.println(this.toString()+" Atmozgott innen: "+lastPlace.toString()+" ide: "+currentPlace.toString() );	//Ezt ki is ï¿½rjuk
+		if (nextCart!=null){		//Ha van rakï¿½tve kocsink akkor azt is "huzzuk"
+			
 			nextCart.move(lastPlace);
+			
 		}
 		return true;
 	}

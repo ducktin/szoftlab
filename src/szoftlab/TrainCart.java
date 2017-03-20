@@ -5,15 +5,20 @@ public class TrainCart extends Movable{
 	private Boolean empty;  //Az érték, hogy a kocsi üres-e
 	private Boolean isFirst; //Ezzel menti, hogy az elsõ nem üres kocsi-e
 	
-	public TrainCart(String name, Color cartColor){
+	public TrainCart(Rail currentPlace, Movable nextCart, String name, Color cartColor){
+		this.currentPlace = currentPlace;
+		this.nextCart = nextCart;
+		//this.isFirst = isF;
 		this.name=name;
 		this.cartColor=cartColor;
 		this.empty=false;
 	}
-	
+	public Color getColor(){
+		return cartColor;
+	}
 	@Override
 	public String toString() {	//A saját fv-nye amivel kiír a konzol ablakba
-		return "TrainCart: "+"name"+" Currently on: "+currentPlace.toString()
+		return "TrainCart: "+name+" Currently on: "+currentPlace.toString()
 		+" Color: "+cartColor.toString();
 	}
 
