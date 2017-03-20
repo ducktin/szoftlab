@@ -38,4 +38,15 @@ public class Switch extends Rail{
 		additionalNeighbours.add(r);
 	}
 	
+	@Override
+	public void connect(Rail r1, Rail r2){
+		neighbour_one=r1;
+		neighbour_two=r2;
+		System.out.println("A valto ide van kotve: "+r1.toString()+" default allasa: "+r2.toString()+" Lehetseges allasai: ");
+		for(Rail item : additionalNeighbours){
+			System.out.println(item.toString()+"\n");
+		}
+		
+	}
+	
 }
