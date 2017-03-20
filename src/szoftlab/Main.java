@@ -78,12 +78,13 @@ public class Main {
 				
 				break;
 			case "4":
-				//SkeletonMethods.TunnelActivate();
+				//Implementalasa kikommentezbe a TunnelEntrace es TunnelManager osztalyokban
 				TunnelEntrace te1 = new TunnelEntrace("te1");
 				TunnelEntrace te2 = new TunnelEntrace("te2");
 				TunnelEntrace te3 = new TunnelEntrace("te3");
 				te1.activate();
-				
+				te2.activate();
+				te3.activate();
 				
 				
 				
