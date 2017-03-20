@@ -2,7 +2,14 @@ package szoftlab;
 
 import java.util.Scanner;
 
-public class TunnelEntrace {
+public class TunnelEntrace extends Rail {
+
+	public TunnelEntrace(String name) {
+		super(name);
+		Name=name;		
+	}
+
+
 
 	private String Name;
 	
@@ -10,6 +17,7 @@ public class TunnelEntrace {
 		{
 			return "Name: " + Name; 
 		}
+	
 
 	
 	public void activate() //aktivaljuk a bejaratot
