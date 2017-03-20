@@ -4,7 +4,6 @@ public class Station extends Rail {
   
 
   private Color color;
-  private Movable usedby;
   
   public String toString() {	//Ez a Station toString fuggvenye ami a felhasznalo szamara fontos infókat kiirja std kimenetre
 		return "Station: " + name;
