@@ -27,7 +27,6 @@ public class Main {
 					+"3. Kocsi allomasokhoz erkezese\n"
 					+"4. Alagutszaj aktivalasa\n"
 					+"5. Valto allitasa\n"
-					+"6. Üzközés\n"
 					);
 			
 			//Scanner scan = new Scanner(System.in);
@@ -84,16 +83,6 @@ public class Main {
 				break;
 			case "5":
 				SkeletonMethods.Switchswitcher(map, scan);
-				break;
-				
-			case "6":
-				Rail r1=new Rail("r1");
-				Rail r2=new Rail("r2");
-				Rail r8=new Rail("r3");
-				
-				Locomotive l1=new Locomotive(r1,null,"l1");
-				Locomotive l5=new Locomotive(r8,null,"l5");
-				
 				break;
 				
 			case "0":

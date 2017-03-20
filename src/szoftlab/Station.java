@@ -29,7 +29,7 @@ public class Station extends Rail {
    * 
    */
   public void emptyCart(TrainCart t, Scanner s1){
-	  System.out.println("emptyCart: Egyezik az állomás és a kocsi színe");
+	  System.out.println("emptyCart: Egyezik az állomás és a kocsi színe?");
 	  String answer=s1.nextLine();
 	  if(answer.equals("true"))
 	  	{
