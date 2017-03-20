@@ -28,7 +28,7 @@ public class SkeletonMethods {
 		System.out.println("Nincs ilyen vonat!");
 	}
 	
-	public static void Switchswitcher(Map map){
+	public static void Switchswitcher(Map map){		//Valtoallitas a felhasznalo kereseinek megfeleloen
 		System.out.println("Kit valtsunk? Kerem a nevet:");
 		Scanner s1 = new Scanner(System.in);
 		String who = s1.nextLine(); 
@@ -39,6 +39,8 @@ public class SkeletonMethods {
 			}
 		}
 	}
+	
+	
 	
 	
 }

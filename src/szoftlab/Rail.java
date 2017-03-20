@@ -32,6 +32,7 @@ public class Rail {		//A sin osztaly, a tobbi palyaelem is ebbol szarmazik.
 	public void connect(Rail one, Rail two){
 		this.neighbour_one=one;
 		this.neighbour_two=two;
+		System.out.println(toString()+" szomszedai mostantol: "+one.toString()+" es "+two.toString());
 	}
 	
 	public void setNeighbourtwo() {

@@ -34,4 +34,8 @@ public class Switch extends Rail{
 		
 	}
 	
+	public void addNeighbour(Rail r){
+		additionalNeighbours.add(r);
+	}
+	
 }

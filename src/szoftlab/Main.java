@@ -83,7 +83,7 @@ public class Main {
 				//SkeletonMethods.TunnelActivate();
 				break;
 			case "4":
-				//SkeletonMethods.Switchswitch();
+				SkeletonMethods.Switchswitcher(map);
 				break;
 					
 			default:
