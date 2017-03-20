@@ -80,9 +80,6 @@ public class Main {
 				break;
 			case "3":
 				//SkeletonMethods.TunnelActivate();
-				TunnelEntrace te1 = new TunnelEntrace();
-				TunnelEntrace te2 = new TunnelEntrace();
-				TunnelEntrace te3 = new TunnelEntrace();
 				
 				
 				
