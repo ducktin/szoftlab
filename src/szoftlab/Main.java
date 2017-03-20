@@ -19,10 +19,11 @@ public class Main {
 		do{
 			
 			System.out.println("Alabbi szekvenciak kozul valaszthatsz:\n (0:kilepes)"
-					+"1. Vonat mozgasa\n"
-					+"2. Kocsi allomasokhoz erkezese\n"
-					+"3. Alagutszaj aktivalasa\n"
-					+"4. Valto allitasa\n"
+					+"1. Tesztpalya inicializasa\n"
+					+"2. Vonat mozgasa\n"
+					+"3. Kocsi allomasokhoz erkezese\n"
+					+"4. Alagutszaj aktivalasa\n"
+					+"5. Valto allitasa\n"
 					);
 			
 			//Scanner scan = new Scanner(System.in);
@@ -34,15 +35,13 @@ public class Main {
 			
 			switch(choice){
 			case "1":
-				Rail r1 = new Rail("r1");
-				Rail r2 = new Rail("r2");
-				Locomotive l1 = new Locomotive(r1, null, "l1");
-				map.rails.add(r1);
-				map.rails.add(r2);
-				map.locomotives.add(l1);
+				SkeletonMethods.Init(map);
+				break;
+			
+			case "2":
 				SkeletonMethods.TrainMover(map);
 				break;
-			case "2":
+			case "3":
 				
 				Rail r3 = new Rail("r3");
 				Rail r4 = new Rail("r4");
@@ -78,7 +77,7 @@ public class Main {
 				
 				
 				break;
-			case "3":
+			case "4":
 				//SkeletonMethods.TunnelActivate();
 				TunnelEntrace te1 = new TunnelEntrace("te1");
 				TunnelEntrace te2 = new TunnelEntrace("te2");
@@ -89,7 +88,7 @@ public class Main {
 				
 				
 				break;
-			case "4":
+			case "5":
 				SkeletonMethods.Switchswitcher(map);
 				break;
 					
