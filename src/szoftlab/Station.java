@@ -22,7 +22,7 @@ public class Station extends Rail {
 	  return color;
   }
   
-  /* kiüriti a parameterkent kapott kocsit
+  /* Kiuriti a parameterkent kapott kocsit
    * 
    */
   public void emptyCart(TrainCart t){
