@@ -43,7 +43,7 @@ public class Main {
 				SkeletonMethods.TrainMover(map);
 				break;
 			case "2":
-				//SkeletonMethods.StationArrive();
+				
 				Rail r3 = new Rail("r3");
 				Rail r4 = new Rail("r4");
 				Rail r5 = new Rail("r5");
@@ -51,6 +51,7 @@ public class Main {
 				Locomotive l2 = new Locomotive(r4, tr1, "l2"); // R4-en a loco
 				Station st1 = new Station("st1", Color.GREEN,r4); // R4 az allomas --> r3rol r4rer green green hivodik az emptCart
 				//Palya kialakitasa
+				map.stats.add(st1);
 				map.locomotives.add(l2);
 				map.traincarts.add(tr1);
 				map.rails.add(r3);
@@ -60,11 +61,9 @@ public class Main {
 				//Stationra erkezes szimulacioja
 				
 				
-				if(tr1.getIsFirst()) //ha if nincs akkor no line found
+				if(tr1.getIsFirst()){ //ha if nincs akkor no line found
 					
-					/*tr1.move(l2.lastPlace);
 					if((tr1.currentPlace == st1.r) && (tr1.cartColor == st1.getColor())){
-						System.out.println("asd2");
 						tr1.empty();//kiurul a kocsi es az empty true lesz 
 						
 						
@@ -72,7 +71,7 @@ public class Main {
 					else
 						System.out.println("Nem egyezik a szinuk");
 				}
-					*/
+					
 			
 				
 				
@@ -81,6 +80,14 @@ public class Main {
 				break;
 			case "3":
 				//SkeletonMethods.TunnelActivate();
+				TunnelEntrace te1 = new TunnelEntrace("te1");
+				TunnelEntrace te2 = new TunnelEntrace("te2");
+				TunnelEntrace te3 = new TunnelEntrace("te3");
+				te1.activate();
+				
+				
+				
+				
 				break;
 			case "4":
 				SkeletonMethods.Switchswitcher(map);

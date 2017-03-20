@@ -1,10 +1,11 @@
 package szoftlab;
 
 public class TrainCart extends Movable{
-	public Color cartColor; //A kocsi szine
-	private Boolean empty;  //Az ertek, hogy a kocsi ures-e
-	private Boolean isFirst; //Ezzel menti, hogy az elo nem ures kocsi-e
-	
+	public Color cartColor; //A kocsi színe
+	private Boolean empty;  //Az érték, hogy a kocsi üres-e
+	private Boolean isFirst = true; //Ezzel menti, hogy az elsõ nem üres kocsi-e
+									//a skeleton miatt rogzitve a true ertek
+		
 	public TrainCart(Rail currentPlace, Movable nextCart, String name, Color cartColor){
 		this.currentPlace = currentPlace;
 		this.nextCart = nextCart;
