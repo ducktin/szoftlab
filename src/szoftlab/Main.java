@@ -9,13 +9,14 @@ public class Main {
 
 	public static void main(String[] args) throws IOException {
 		
-
-		Scanner scan = new Scanner(System.in);
+		
+		
 		Map map = new Map();
 		
-		String line;
+		String choice = null;
+        Scanner scan = new Scanner(System.in);
 		
-		while(true){
+		do{
 			
 			System.out.println("Alabbi szekvenciak kozul valaszthatsz:\n (0:kilepes)"
 					+"1. Vonat mozgása\n"
@@ -24,13 +25,14 @@ public class Main {
 					+"4. Váltó állítása\n"
 					);
 			
-			
-			
-			line = scan.nextLine();
+			//Scanner scan = new Scanner(System.in);
+			/*BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+			line = br.readLine();
 			if(line.equals("0")) break;
+			//br.close();*/
+			choice = scan.nextLine();
 			
-			
-			switch(line){
+			switch(choice){
 			case "1":
 				Rail r1 = new Rail("r1");
 				Rail r2 = new Rail("r2");
@@ -53,8 +55,8 @@ public class Main {
 			default:
 				break;
 			}
-			
-		}
+			//scan.close();
+		}while(true);
 		
 
 
@@ -66,9 +68,9 @@ public class Main {
 		map.locomotives.add(l1);
 
 		SkeletonMethods.TrainMover(map);*/
+		
 
-
-		SkeletonMethods.TrainMover(map);
+		//SkeletonMethods.TrainMover(map);
 
 		
 	}
