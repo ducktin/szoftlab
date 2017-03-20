@@ -11,7 +11,7 @@ public class TunnelEntrace extends Rail {
 	
 	public String toString() //kiirjuk a nevet a bejaratnak
 		{ 
-			return "Tunnel " + name; 
+			return "TunnelEntrace " + name; 
 
 		}
 	
@@ -31,8 +31,9 @@ public class TunnelEntrace extends Rail {
 				}
 			else
 			{
-				s1.close();
 				tm.Addactive(this); //a TM aktivalo fuggvenyet hivjuk
+				s1.close();
+				
 			}
 			
 		}

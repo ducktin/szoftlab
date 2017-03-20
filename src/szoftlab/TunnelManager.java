@@ -19,12 +19,12 @@ public class TunnelManager {
 			if(answer.equals("true")) //aktiv ket bejarat, igy ujat nem lehet felvenni
 				{
 					System.out.println("Nem lehet uj bejaratot aktivva tenni");
-					s1.close();
+					
 					return true;
 				}
 			else
 			{
-				s1.close();
+				
 				return false;
 			}
 			 
@@ -40,6 +40,7 @@ public class TunnelManager {
 				if(answer.equals("true")) //aktivva tesszuk a bejaratot
 				{
 					System.out.println(te.toString()+" aktiv lett");
+					s1.close();
 					System.out.println("Van mar ket aktiv bejarat?");
 					Scanner s2=new Scanner(System.in);
 					String answer2=s1.nextLine();
@@ -47,7 +48,7 @@ public class TunnelManager {
 							{
 								System.out.println("Kiepitem az alagutat koztuk");
 							}
-						s1.close();
+						
 						s2.close();
 						
 				}
