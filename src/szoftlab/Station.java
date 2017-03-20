@@ -5,19 +5,21 @@ public class Station extends Rail {
 
   private Color color;
   private Movable usedby;
-  public  Rail r;
   
   public String toString() {	//Ez a Station toString fuggvenye ami a felhasznalo szamara fontos infókat kiirja std kimenetre
 		return "Station: " + name;
   }
- 
-  public Station(String name, Color c,Rail place){
+	
+ /* Station konstruktora
+  * 
+  */
+  public Station(String name, Color c){
 	  super(name);
 	  color = c;
-	  r = place; //helye
-	  
-	  
   }
+  /* Visszaadja a Station szinet
+   *
+   */
   public Color getColor(){
 	  return color;
   }
