@@ -1,9 +1,9 @@
 package szoftlab;
 
 public class TrainCart extends Movable{
-	public Color cartColor; //A kocsi színe
-	private Boolean empty;  //Az érték, hogy a kocsi üres-e
-	private Boolean isFirst = true; //Ezzel menti, hogy az elsõ nem üres kocsi-e
+	public Color cartColor; //A kocsi szine
+	private Boolean empty;  //Az ertek, hogy a kocsi ures-e
+	private Boolean isFirst = true; //Ezzel menti, hogy az elso nem ures kocsi-e
 									//a skeleton miatt rogzitve a true ertek
 		
 	public TrainCart(Rail currentPlace, Movable nextCart, String name, Color cartColor){
@@ -13,6 +13,10 @@ public class TrainCart extends Movable{
 		this.name=name;
 		this.cartColor=cartColor;
 		this.empty=false;
+		System.out.println(toString()+" letrehozva itt: "+currentPlace.toString());
+		if(nextCart!=null){
+			System.out.println("Moge kotve: "+nextCart.toString());
+		}
 	}
 	public Color getColor(){
 		return cartColor;

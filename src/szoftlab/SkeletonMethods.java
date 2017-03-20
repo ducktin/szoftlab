@@ -68,6 +68,10 @@ public class SkeletonMethods {
 		sw2.addNeighbour(r5);
 		sw2.connect(t2, r1);
 		
+		TrainCart tc1 = new TrainCart(sw2, null, "cart1", Color.GREEN);		//Kocsi letrehozasa
+		Locomotive l1 = new Locomotive(r1, tc1, "locomotive1");				//Mozdony letrehozasa
+		
+		
 	}
 	
 	
