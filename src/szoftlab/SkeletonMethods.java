@@ -4,9 +4,8 @@ import java.util.Scanner;
 
 public class SkeletonMethods {
 		
-	public static void TrainMover(Map map){
+	public static void TrainMover(Map map, Scanner s1){
 		System.out.println("Ki mozogjon? Kerem a nevet:");
-		Scanner s1 = new Scanner(System.in);
 		String tomove = s1.nextLine(); 
 		for (Locomotive item : map.locomotives) {	// Itt kell megnezni, hogy van-e ilyen vonatunk.
 		    if (item.name.equals(tomove)){
@@ -16,7 +15,6 @@ public class SkeletonMethods {
 				for(Rail place : map.rails){	// Itt kell megnezni, hogy van-e ilyen hely ahova mehetunk.
 					if (place.name.equals(tohere)){  //Ha minden stimmel, mozgatunk.
 						item.move(place);
-						s1.close();
 						return;
 					}
 				}
@@ -24,7 +22,6 @@ public class SkeletonMethods {
 				
 		    }
 		}
-		s1.close();
 		System.out.println("Nincs ilyen vonat!");
 	}
 	

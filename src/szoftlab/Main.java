@@ -36,11 +36,12 @@ public class Main {
 			
 			switch(choice){
 			case "1":
+				
 				SkeletonMethods.Init(map);
 				break;
 			
 			case "2":
-				SkeletonMethods.TrainMover(map);
+				SkeletonMethods.TrainMover(map, scan);
 				break;
 			case "3":
 				
@@ -57,7 +58,7 @@ public class Main {
 				map.rails.add(r3);
 				map.rails.add(r4);	
 				map.rails.add(r5);
-				SkeletonMethods.TrainMover(map);
+				SkeletonMethods.TrainMover(map, scan);
 				//Stationra erkezes szimulacioja
 				
 				
