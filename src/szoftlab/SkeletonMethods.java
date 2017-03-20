@@ -13,7 +13,7 @@ public class SkeletonMethods {
 		    	System.out.println(tomove+" moving");
 		    	System.out.println("Hova mozogjon? Kerem a nevet:");
 				String tohere = s1.nextLine(); 
-				for(Rail place : map.rails){	// Itt kell megnezni, hogy van-e ilyen hely ahova mehetünk.
+				for(Rail place : map.rails){	// Itt kell megnezni, hogy van-e ilyen hely ahova mehetunk.
 					if (place.name.equals(tohere)){  //Ha minden stimmel, mozgatunk.
 						item.move(place);
 						s1.close();

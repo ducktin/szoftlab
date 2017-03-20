@@ -5,9 +5,10 @@ import java.util.ArrayList;
 public class Map {
 	ArrayList<Locomotive> locomotives = new ArrayList<Locomotive>();
 	ArrayList<Rail> rails = new ArrayList<Rail>();
+	ArrayList<TrainCart> traincarts = new ArrayList<TrainCart>();
 	TunnelManager tunnelman;
 	
 	public void createTrain(EntryPoint e, Color c){
-		System.out.println("createTrain() létrejött a vonat az e belépõpontnál");
+		System.out.println("createTrain() lï¿½trejï¿½tt a vonat az e belï¿½pï¿½pontnï¿½l");
 	}
 }

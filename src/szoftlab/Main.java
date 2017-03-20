@@ -19,10 +19,10 @@ public class Main {
 		do{
 			
 			System.out.println("Alabbi szekvenciak kozul valaszthatsz:\n (0:kilepes)"
-					+"1. Vonat mozgása\n"
-					+"2. Kocsi állomáshoz érkezése\n"
-					+"3. Alagútszáj aktiválása\n"
-					+"4. Váltó állítása\n"
+					+"1. Vonat mozgasa\n"
+					+"2. Kocsi allomasokhoz erkezese\n"
+					+"3. Alagutszaj aktivalasa\n"
+					+"4. Valto allitasa\n"
 					);
 			
 			//Scanner scan = new Scanner(System.in);
@@ -44,6 +44,40 @@ public class Main {
 				break;
 			case "2":
 				//SkeletonMethods.StationArrive();
+				Rail r3 = new Rail("r3");
+				Rail r4 = new Rail("r4");
+				Rail r5 = new Rail("r5");
+				TrainCart tr1 = new TrainCart(r3,null,"tr1",Color.GREEN); // R3-on a tr1
+				Locomotive l2 = new Locomotive(r4, tr1, "l2"); // R4-en a loco
+				Station st1 = new Station("st1", Color.GREEN,r4); // R4 az allomas --> r3rol r4rer green green hivodik az emptCart
+				//Palya kialakitasa
+				map.locomotives.add(l2);
+				map.traincarts.add(tr1);
+				map.rails.add(r3);
+				map.rails.add(r4);	
+				map.rails.add(r5);
+				SkeletonMethods.TrainMover(map);
+				//Stationra erkezes szimulacioja
+				
+				
+				if(tr1.getIsFirst()) //ha if nincs akkor no line found
+					
+					/*tr1.move(l2.lastPlace);
+					if((tr1.currentPlace == st1.r) && (tr1.cartColor == st1.getColor())){
+						System.out.println("asd2");
+						tr1.empty();//kiurul a kocsi es az empty true lesz 
+						
+						
+					}
+					else
+						System.out.println("Nem egyezik a szinuk");
+				}
+					*/
+			
+				
+				
+				
+				
 				break;
 			case "3":
 				//SkeletonMethods.TunnelActivate();

@@ -1,11 +1,10 @@
 package szoftlab;
 
-public abstract class Movable {		//A Locomotive és a TrainCart ososztalya
+public abstract class Movable {		//A Locomotive es a TrainCart ososztalya
 	protected Rail lastPlace;		//Tarolja melyik helyen jartunk utoljara
 	protected Rail currentPlace;	//Illetve azt is, hogy most hol van
 	protected Movable nextCart;		//Az elso kocsi referenciaja ami utana jon
-	protected String name;			//Az objektum neve, ez a Szkeletonhoz fontos
-	
+	protected String name; 			//Az objektum neve, ez a Szkeletonhoz fontos
 	public Movable getNextCart() {
 		return nextCart;
 	}

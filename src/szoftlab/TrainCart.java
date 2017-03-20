@@ -5,10 +5,16 @@ public class TrainCart extends Movable{
 	private Boolean empty;  //Az ertek, hogy a kocsi ures-e
 	private Boolean isFirst; //Ezzel menti, hogy az elo nem ures kocsi-e
 	
-	public TrainCart(String name, Color cartColor){
+	public TrainCart(Rail currentPlace, Movable nextCart, String name, Color cartColor){
+		this.currentPlace = currentPlace;
+		this.nextCart = nextCart;
+		//this.isFirst = isF;
 		this.name=name;
 		this.cartColor=cartColor;
 		this.empty=false;
+	}
+	public Color getColor(){
+		return cartColor;
 	}
 	
 	@Override
