@@ -15,7 +15,8 @@ public class TunnelManager {
 		{
 			System.out.println("checkActives: Aktiv ket bejarat?");
 			Scanner s1=new Scanner(System.in);
-			if(s1.equals("true")) //aktiv ket bejarat, igy ujat nem lehet felvenni
+			String answer=s1.nextLine();
+			if(answer.equals("true")) //aktiv ket bejarat, igy ujat nem lehet felvenni
 				{
 					System.out.println("Nem lehet uj bejaratot aktivva tenni");
 					s1.close();
@@ -35,12 +36,14 @@ public class TunnelManager {
 			{
 				System.out.println("Addactive: Aktivva tegyem?"+ te.toString());
 				Scanner s1=new Scanner(System.in);
-				if(s1.equals("true")) //aktivva tesszuk a bejaratot
+				String answer=s1.nextLine();
+				if(answer.equals("true")) //aktivva tesszuk a bejaratot
 				{
 					System.out.println(te.toString()+" aktiv lett");
 					System.out.println("Van mar ket aktiv bejarat?");
 					Scanner s2=new Scanner(System.in);
-						if(s2.equals("true")) //volt ket aktiv, ki kell epiteni koztuk az alagutat
+					String answer2=s1.nextLine();
+						if(answer2.equals("true")) //volt ket aktiv, ki kell epiteni koztuk az alagutat
 							{
 								System.out.println("Kiepitem az alagutat koztuk");
 							}

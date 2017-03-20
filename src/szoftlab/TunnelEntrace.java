@@ -15,7 +15,7 @@ public class TunnelEntrace extends Rail {
 	
 	public String toString() //kiirjuk a nevet a bejaratnak
 		{
-			return "Name: " + Name; 
+			return Name; 
 		}
 	
 
@@ -25,7 +25,8 @@ public class TunnelEntrace extends Rail {
 			TunnelManager tm=new TunnelManager(); //ezaltal hivatkozunk a tunnel managerre
 			System.out.println("activate: Aktiv?");
 			Scanner s1=new Scanner(System.in);
-			if(s1.equals("true")) //aktiv az adott bejárat?
+			String answer=s1.nextLine();
+			if(answer.equals("true")) //aktiv az adott bejárat?
 				{
 					tm.Substractactive(this); //meghivjuk a TM deaktiváló fuggvenyet
 					s1.close();

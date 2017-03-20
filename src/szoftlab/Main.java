@@ -9,6 +9,9 @@ public class Main {
 
 	public static void main(String[] args) throws IOException {
 		
+		TunnelEntrace t1=new TunnelEntrace("Tunnel1");
+		t1.activate();
+		
 		
 		
 		Map map = new Map();
