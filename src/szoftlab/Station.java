@@ -1,7 +1,9 @@
 package szoftlab;
 
 public class Station {
-  private Color color;
+  
+
+private Color color;
   private String name;
   private Movable usedby;
   public  Rail r;
@@ -9,10 +11,10 @@ public class Station {
   public String toString() {	//Ez a Station toString fuggvenye ami a felhasznalo szamara fontos infókat kiirja std kimenetre
 		return "Station: " + name;
   }
-  
-  public Station(String n, Color c,Rail place){
+ 
+  public Station(String name, Color c,Rail place){
 	  
-	  name = n;
+	 
 	  color = c;
 	  r = place; //helye
 	  

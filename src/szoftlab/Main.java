@@ -43,7 +43,7 @@ public class Main {
 				SkeletonMethods.TrainMover(map);
 				break;
 			case "2":
-				//SkeletonMethods.StationArrive();
+				
 				Rail r3 = new Rail("r3");
 				Rail r4 = new Rail("r4");
 				Rail r5 = new Rail("r5");
@@ -80,6 +80,14 @@ public class Main {
 				break;
 			case "3":
 				//SkeletonMethods.TunnelActivate();
+				TunnelEntrace te1 = new TunnelEntrace();
+				TunnelEntrace te2 = new TunnelEntrace();
+				TunnelEntrace te3 = new TunnelEntrace();
+				
+				
+				
+				
+				
 				break;
 			case "4":
 				//SkeletonMethods.Switchswitch();
