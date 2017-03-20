@@ -27,4 +27,18 @@ public class SkeletonMethods {
 		s1.close();
 		System.out.println("Nincs ilyen vonat!");
 	}
+	
+	public static void Switchswitcher(Map map){
+		System.out.println("Kit valtsunk? Kerem a nevet:");
+		Scanner s1 = new Scanner(System.in);
+		String who = s1.nextLine(); 
+		for(Rail item : map.rails){
+			if(item.name.equals(who)){
+				item.setNeighbourtwo();
+				System.out.println(item.toString()+" allasa mostantol "+item.neighbour_two.toString()+" fele all.");
+			}
+		}
+	}
+	
+	
 }

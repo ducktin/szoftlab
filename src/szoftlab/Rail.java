@@ -34,4 +34,7 @@ public class Rail {		//A sin osztaly, a tobbi palyaelem is ebbol szarmazik.
 		this.neighbour_two=two;
 	}
 	
+	public void setNeighbourtwo() {
+	}
+	
 }
