@@ -47,7 +47,7 @@ public class Main {
 				Rail r5 = new Rail("r5");
 				TrainCart tr1 = new TrainCart(r3,null,"tr1",Color.GREEN); // R3-on a tr1
 				Locomotive l2 = new Locomotive(r4, tr1, "l2"); // R4-en a loco
-				Station st1 = new Station("st1", Color.GREEN,r4); // R4 az allomas --> r3rol r4rer green green hivodik az emptCart
+				Station st1 = new Station("st1", Color.GREEN); // R4 az allomas --> r3rol r4rer green green hivodik az emptCart
 				//Palya kialakitasa
 				map.stats.add(st1);
 				map.locomotives.add(l2);
@@ -61,7 +61,7 @@ public class Main {
 				
 				if(tr1.getIsFirst()){ //ha if nincs akkor no line found
 					
-					if((tr1.currentPlace == st1.r) && (tr1.cartColor == st1.getColor())){
+					if((tr1.currentPlace == st1) && (tr1.cartColor == st1.getColor())){
 						tr1.empty();//kiurul a kocsi es az empty true lesz 
 						
 						
